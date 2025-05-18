@@ -1,4 +1,90 @@
-html, body {
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html, body, h1, p {
     margin: 0;
     padding: 0;
 }
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #121212;
+    text-align: center;
+    width: 100%;
+    min-height: 100vh;
+}
+
+header {
+    background: url('images/hero.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: rgba(255, 255, 255, 0.6);
+    background-blend-mode: lighten;
+    height: 208px;
+
+    display: flex;
+    justify-content: space-around;
+}
+
+
+
+/* Search */
+#search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2em;
+}
+
+.search-bar {
+    padding: 1em 2em;
+    background: #2E2E2F;
+    border-radius: 6px 0 0 6px;
+}
+
+#search-input {
+    color: #A5A5A5;
+    background: #2E2E2F;
+    border: none;
+}
+
+#search-input::placeholder {
+    color: #A5A5A5;
+}
+
+#search-button {
+    background: #4B4B4B;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 0 6px 6px 0;
+    padding: 1.4em 2em;
+    cursor: pointer;
+}
+
+#search-button:hover {
+    background: #5B5B5B;
+}
+
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2em;
+}
+
+/* Idle Content */
+.idle {
+    color: #2E2E2F;
+    font-size: 1.125rem;
+    font-weight: 700;
+}
+
+.idle-icon {
+    font-size: 10vh;
+}
+
+
+
