@@ -9,41 +9,79 @@ html, body, h1, p {
 
 body {
     font-family: 'Inter', sans-serif;
-    background-color: #121212;
+    background: #1C1C1C;
     text-align: center;
+    
     width: 100%;
+    max-width: 550px;
     min-height: 100vh;
+    margin: 0 auto;
+    
+    display: flex;
+    flex-direction: column;
 }
 
 header {
     background: url('images/hero.png');
     background-size: cover;
     background-repeat: no-repeat;
-    background-color: rgba(255, 255, 255, 0.6);
-    background-blend-mode: lighten;
+    background-position: right 25%;
+    background-color: rgb(0, 0, 0, 0.8);
+    background-blend-mode:darken;
     height: 208px;
-
+    
     display: flex;
     justify-content: space-around;
+    align-items: center;
+    
+    color: #FFFFFF;
+    position: relative;
 }
 
+header h1 {
+    font-size: 2.67rem;
+    font-weight: 800;
+}
 
+#watchlist {
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: #FFFFFF;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#watchlist:hover {
+    color: #A5A5A5;
+}
 
 /* Search */
 #search-container {
+    position: absolute;
+    top: 90%;
+    
     display: flex;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
-    margin-top: 2em;
-}
-
-.search-bar {
-    padding: 1em 2em;
+    
+    width: 90%;
     background: #2E2E2F;
     border-radius: 6px 0 0 6px;
 }
 
+.search-bar {
+    width: 80%;
+    display: flex;
+    justify-content: start;
+    gap: 0.5em;
+}
+
+.search-bar i {
+    margin-left: 1em;
+}
+
 #search-input {
+    width: 88%;
     color: #A5A5A5;
     background: #2E2E2F;
     border: none;
@@ -58,7 +96,7 @@ header {
     color: #FFFFFF;
     border: none;
     border-radius: 0 6px 6px 0;
-    padding: 1.4em 2em;
+    padding: 1em 3em;
     cursor: pointer;
 }
 
@@ -68,11 +106,12 @@ header {
 
 
 main {
+    background-color: #121212;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 2em;
+    flex: 1 1 auto;
 }
 
 /* Idle Content */
@@ -83,7 +122,7 @@ main {
 }
 
 .idle-icon {
-    font-size: 10vh;
+    font-size: 8vh;
 }
 
 
