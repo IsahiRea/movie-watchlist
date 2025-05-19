@@ -1,18 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Watchlist</title>
-    <link rel="stylesheet" href="index.css">
-</head>
-<body>
-    <h1>My Watchlist</h1>
-    <div id="search-container">
-        <input type="text" id="search-input" placeholder="Search for a movie...">
-        <button id="search-button">Search</button>
-    </div>
+    <head>
+        <meta charset= "UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Movie Search</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <header>
+            <h1>My Watchlist</h1>
+            <p><a href="index.html" id="navigate">Search for movies</a></p>
+        </header>
+        
 
-    <script src="index.js" type="module"></script>
-</body>
+        <main>
+            <div id="movie-list">
+                <!-- Movie cards will be dynamically inserted here -->
+                <i class="fa-solid fa-film idle-icon" style="color: #2E2E2F;"></i>
+                <p class="idle">Start exploring</p>
+            </div>
+
+            <!-- <div id="pagination">
+                <button id="prev-button">Previous</button>
+                <button id="next-button">Next</button>
+            </div> -->
+        </main>
+
+        <script src="watchlist.js" type="module"></script>
+    </body>
 </html>

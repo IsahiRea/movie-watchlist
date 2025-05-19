@@ -2,7 +2,7 @@
     box-sizing: border-box;
 }
 
-html, body, h1, p {
+html, body, h1, h3, p {
     margin: 0;
     padding: 0;
 }
@@ -13,6 +13,7 @@ body {
     text-align: center;
     
     width: 100%;
+    min-width: 313px;
     max-width: 550px;
     min-height: 100vh;
     margin: 0 auto;
@@ -43,7 +44,7 @@ header h1 {
     font-weight: 800;
 }
 
-#watchlist {
+#navigate {
     font-size: 0.875rem;
     font-weight: 700;
     color: #FFFFFF;
@@ -51,7 +52,7 @@ header h1 {
     cursor: pointer;
 }
 
-#watchlist:hover {
+#navigate:hover {
     color: #A5A5A5;
 }
 
@@ -112,18 +113,120 @@ main {
     justify-content: center;
     align-items: center;
     flex: 1 1 auto;
+    padding-top: 2em;
 }
+ .idle, .error-item {
+    font-size: 1.125rem;
+    font-weight: 700;
+ }
 
 /* Idle Content */
 .idle {
     color: #2E2E2F;
-    font-size: 1.125rem;
-    font-weight: 700;
 }
 
 .idle-icon {
     font-size: 8vh;
 }
+
+.error-item {
+    color: #787878;
+    width: 60%;
+    margin: 0 auto;
+}
+
+/* Individual Movies */
+
+#movie-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+}
+
+.movie-item {
+    display: flex;
+    gap: 1em;
+    border-bottom: 1px solid #2C2C2C;
+    padding: 1.5em 1em;
+}
+
+.poster-container {
+    width: 20%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.poster-container img {
+    width: 100%;
+    height: 100%;
+    border-radius: 6px;
+}
+
+.info-container {
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 0.5em;
+    width: 80%;
+}
+
+.rating, .details {
+    font-size: 0.75rem;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 1em;
+    width: 100%;
+}
+
+.rating h3 {
+    font-size: 1.125rem;
+    font-weight: 500;
+}
+
+.runtime {
+    text-align: start;
+    width: 15%;
+}
+
+.list-container {
+    display: flex;
+    align-items: center;
+    gap: .1em;
+}
+
+.list-container i {
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.watchlist-btn {
+    background: #121212;
+    color: #FFFFFF;
+    border: none;
+    cursor: pointer;
+}
+
+.watchlist-btn:hover {
+    color: #A5A5A5;
+}
+
+.summary {
+    text-align: start;
+    color: #A5A5A5;
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.3;
+}
+
+
+
 
 
 
