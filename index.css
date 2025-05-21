@@ -44,7 +44,7 @@ header h1 {
     font-weight: 800;
 }
 
-#navigate {
+.navigate {
     font-size: 0.875rem;
     font-weight: 700;
     color: #FFFFFF;
@@ -52,7 +52,7 @@ header h1 {
     cursor: pointer;
 }
 
-#navigate:hover {
+.navigate:hover {
     color: #A5A5A5;
 }
 
@@ -115,7 +115,7 @@ main {
     flex: 1 1 auto;
     padding-top: 2em;
 }
- .idle, .error-item {
+ .idle, .error-item, .empty-list {
     font-size: 1.125rem;
     font-weight: 700;
  }
@@ -133,6 +133,15 @@ main {
     color: #787878;
     width: 60%;
     margin: 0 auto;
+}
+
+.empty-list {
+    margin: 1em;
+    color: #787878;
+}
+
+.list-container a span {
+    margin-right: .5em;
 }
 
 /* Individual Movies */
@@ -202,6 +211,7 @@ main {
 }
 
 .list-container i {
+    color: #FFFFFF;
     font-size: 1.2rem;
     cursor: pointer;
 }

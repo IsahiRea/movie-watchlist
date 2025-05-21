@@ -10,21 +10,18 @@
     <body>
         <header>
             <h1>My Watchlist</h1>
-            <p><a href="index.html" id="navigate">Search for movies</a></p>
+            <p><a href="index.html" class="navigate">Search for movies</a></p>
         </header>
         
 
         <main>
             <div id="movie-list">
-                <!-- Movie cards will be dynamically inserted here -->
-                <i class="fa-solid fa-film idle-icon" style="color: #2E2E2F;"></i>
-                <p class="idle">Start exploring</p>
+                <p class="empty-list">Your watchlist is looking a little empty...</p>
+                <div class="list-container">
+                    
+                    <a class="navigate" href="index.html"><span><i class="fa-solid fa-circle-plus"></i></span>Lets add some movies</a>
+                </div>
             </div>
-
-            <!-- <div id="pagination">
-                <button id="prev-button">Previous</button>
-                <button id="next-button">Next</button>
-            </div> -->
         </main>
 
         <script src="watchlist.js" type="module"></script>

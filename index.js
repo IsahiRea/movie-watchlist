@@ -11,16 +11,6 @@ document.addEventListener('click', (event) => {
     }
 })
 
-function addToWatchlist(movieId) {
-    const movie = watchlist.find((item) => item.imdbID === movieId)
-    if (!movie) {
-        getMovieByID(movieId).then((movie) => {
-            watchlist.push(movie)
-            // localStorage.setItem('watchlist', JSON.stringify(watchlist))
-        })
-    }
-}
-
 document.getElementById('search-button').addEventListener('click', async () => {
     
     const searchEl = document.getElementById('search-input')
@@ -60,6 +50,33 @@ async function getMovieByID(id) {
 
     const movie = await response.json()
     return movie
+}
+
+function checkWatchlist() {
+    console.log('checkWatchlist')
+    const watchlistItems = watchlist.map((item) => item.imdbID)
+
+    //TODO: check if the movie is in the watchlist
+    const buttons = document.querySelectorAll('.watchlist-btn')
+    console.log(watchlistItems)
+    console.log(buttons)
+
+    buttons.forEach((button) => {
+        console.log(button.dataset.id)
+        if (watchlistItems.includes(button.dataset.id)) {
+            button.parentNode.innerHTML = '<i class="fa-solid fa-check"></i>'
+        }
+    })
+}
+
+function addToWatchlist(movieId) {
+    const movie = watchlist.find((item) => item.imdbID === movieId)
+    if (!movie) {
+        getMovieByID(movieId).then((movie) => {
+            watchlist.push(movie)
+            localStorage.setItem('watchlist', JSON.stringify(watchlist))
+        })
+    }
 }
 
 function handleNoMoviesFound() {
@@ -109,5 +126,8 @@ async function renderWatchList(movies) {
     Promise.all(listHTMLPromises).then((listHTML) => {
         movieListContainer.innerHTML = listHTML.join('')
     })
+
+    //TODO: Await for the listHTMLPromises to finish before calling checkWatchlist
+    checkWatchlist()
 }
 
