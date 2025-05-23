@@ -61,6 +61,7 @@ async function renderWatchList(movies) {
 
 if (watchlist.length) {
     await renderWatchList(watchlist)
+    document.querySelector('main').style.justifyContent = 'flex-start'
 }
 
 // movieListContainer.innerHTML = `
