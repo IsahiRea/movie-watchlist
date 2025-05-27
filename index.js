@@ -123,7 +123,7 @@ async function renderWatchList(movies) {
         </div>`
     })
 
-    Promise.all(listHTMLPromises).then((listHTML) => {
+    await Promise.all(listHTMLPromises).then((listHTML) => {
         movieListContainer.innerHTML = listHTML.join('')
     })
 
