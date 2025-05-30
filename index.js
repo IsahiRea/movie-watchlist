@@ -127,7 +127,6 @@ async function renderWatchList(movies) {
         movieListContainer.innerHTML = listHTML.join('')
     })
 
-    //TODO: Await for the listHTMLPromises to finish before calling checkWatchlist
     checkWatchlist()
 }
 
